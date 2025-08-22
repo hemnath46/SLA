@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: rgb(154, 154, 230);
+    display: flex;
+    /* position: fixed; */
+    top: 1px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width:99%;
+}
+
+.navlink{
+    display: flex;
+    gap: 10px;
+    /* flex-direction: column;   for arrange column  */
+   
+}
+.navlink a{
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-weight: bolder;
+}
+input[type="text"]{
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+

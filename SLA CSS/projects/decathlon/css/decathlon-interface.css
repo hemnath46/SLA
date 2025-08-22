@@ -1,0 +1,160 @@
+.products-shows{
+    background-color: brown;
+    padding: 20px;
+    display: flex;
+    font-weight: bolder;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+}
+.container {
+    background-color: rgb(249, 38, 87);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    color: white;
+    font-weight: bolder;
+}
+.justify{
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.showoff{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.newproduct{
+    padding: 20px;
+    background-color:rgb(154, 154, 230);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.cleaning{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.chainloob{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.spocket{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.crashguard{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.exhaust{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.insta360{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;    
+}
+.liverkit{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.toolskit{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.toprack{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.ridex{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.kit1{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    height: 515px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}
+.sports{
+    background-color:rgb(247, 247, 247) ;
+    color: rgb(0, 0, 0);
+    width: 360px;
+    padding: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius:8px ;
+}

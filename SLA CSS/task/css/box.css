@@ -1,0 +1,62 @@
+.hello{
+    background-color: rgb(204, 0, 255);
+    color: black;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px;
+}
+.model1{
+    background-color: rgb(204, 0, 255);
+    color: black;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    position: relative;
+    top: 100px;
+    bottom: 50px;
+    right: 50px;
+    left: 25px;
+}
+.model2{
+    background-color: rgb(204, 0, 255);
+    color: black;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    position: relative;
+    top: 50px;
+    bottom: 50px;
+    right: 50px;
+    left: 50px;
+}
+.model3{
+    background-color: rgb(204, 0, 255);
+    color: black;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    position: relative;
+}
+.overflow{
+    background-color: rgb(204, 0, 255);
+    color: black;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    overflow: scroll;
+}

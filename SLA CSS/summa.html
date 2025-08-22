@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Amazon-like Page (structure only)</title>
+  <style>
+    /* Basic reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.4;color:#111;background:#fff}
+
+    /* Header */
+    .topbar{background:#131921;color:#fff;padding:8px 16px;display:flex;align-items:center;gap:12px}
+    .logo{font-weight:800;font-size:20px;color:#ff9900}
+    .search{flex:1;display:flex}
+    .search input{flex:1;padding:10px;border-radius:4px 0 0 4px;border:1px solid #ddd}
+    .search button{padding:10px 14px;border-radius:0 4px 4px 0;border:1px solid #ddd;background:#febd69;cursor:pointer}
+    .header-actions{display:flex;gap:12px;align-items:center}
+    .cart{background:#fff;color:#111;padding:6px 10px;border-radius:4px}
+
+    /* Navigation */
+    nav.primary{background:#232f3e;color:#fff;padding:8px 16px}
+    nav.primary .nav-inner{display:flex;gap:10px;flex-wrap:wrap}
+    nav.primary a{color:#fff;text-decoration:none;padding:6px 8px;border-radius:4px}
+
+    /* Page layout */
+    .container{max-width:1200px;margin:16px auto;padding:0 16px}
+    .hero{display:flex;gap:12px;margin-bottom:16px}
+    .hero .hero-left{flex:2;background:linear-gradient(90deg,#f7f7f7,#fff);padding:18px;border-radius:6px}
+    .hero .hero-right{flex:1;display:flex;flex-direction:column;gap:12px}
+
+    /* Two-column area */
+    .content{display:grid;grid-template-columns:250px 1fr;gap:16px}
+    .sidebar{border:1px solid #eee;padding:12px;border-radius:6px}
+    .filters h4{margin-bottom:8px}
+    .filters label{display:block;margin:6px 0}
+
+    /* Product grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .card{border:1px solid #eee;padding:12px;border-radius:6px;background:#fff;display:flex;flex-direction:column;gap:8px}
+    .card img{width:100%;height:180px;object-fit:contain;background:#fafafa}
+    .price{font-weight:700;color:#b12704}
+    .rating{color:#ffa41c}
+    .add-btn{margin-top:auto;padding:8px;border-radius:6px;background:#ffd814;border:1px solid #f0c14b}
+
+    /* Footer */
+    footer{margin-top:24px;background:#f3f3f3;padding:20px;border-top:1px solid #e1e1e1}
+    footer .cols{display:flex;gap:20px;flex-wrap:wrap}
+    footer a{display:block;color:#111;text-decoration:none;margin:6px 0}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .content{grid-template-columns:1fr}
+      .hero{flex-direction:column}
+      .topbar{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header: logo, search, account, cart -->
+  <header>
+    <div class="topbar">
+      <div class="logo">amazony</div>
+      <div class="search" role="search" aria-label="Site search">
+        <input type="search" placeholder="Search for products, brands and more" aria-label="Search">
+        <button aria-label="Search">Search</button>
+      </div>
+      <div class="header-actions">
+        <div class="account">
+          <div style="font-size:12px">Hello, sign in</div>
+          <div style="font-weight:600">Account & Lists</div>
+        </div>
+        <div class="orders" style="font-size:14px">Returns<br><strong>& Orders</strong></div>
+        <div class="cart">Cart (0)</div>
+      </div>
+    </div>
+
+    <!-- Primary navigation -->
+    <nav class="primary" aria-label="Primary">
+      <div class="nav-inner container">
+        <a href="#">All</a>
+        <a href="#">Amazon Pay</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Electronics</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Fashion</a>
+        <a href="#">Home & Kitchen</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- Hero area with promotional carousel + small banners -->
+    <section class="hero">
+      <div class="hero-left" aria-label="Main promotional banner">
+        <!-- In a real build this would be a carousel component -->
+        <h2 style="margin-bottom:8px">Big Savings on Top Brands</h2>
+        <p style="color:#555">Limited time deals — up to 60% off on select electronics, home & kitchen essentials and more.</p>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <img src="https://via.placeholder.com/400x200?text=Hero+Image" alt="promo" style="width:60%;border-radius:6px">
+          <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+            <img src="https://via.placeholder.com/150x90?text=Deal+1" alt="deal1" style="border-radius:6px">
+            <img src="https://via.placeholder.com/150x90?text=Deal+2" alt="deal2" style="border-radius:6px">
+          </div>
+        </div>
+      </div>
+      <aside class="hero-right">
+        <div style="border:1px solid #eee;padding:10px;border-radius:6px">Sign in for the best experience</div>
+        <div style="border:1px solid #eee;padding:10px;border-radius:6px">Today's Deals</div>
+      </aside>
+    </section>
+
+    <!-- Content area: sidebar filters + product grid -->
+    <section class="content">
+      <aside class="sidebar" aria-label="Filter sidebar">
+        <div class="filters">
+          <h4>Filter by</h4>
+          <div>
+            <strong>Department</strong>
+            <label><input type="checkbox"> Electronics</label>
+            <label><input type="checkbox"> Home & Kitchen</label>
+            <label><input type="checkbox"> Fashion</label>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Price</strong>
+            <label><input type="radio" name="price"> Under ₹500</label>
+            <label><input type="radio" name="price"> ₹500 - ₹2,000</label>
+            <label><input type="radio" name="price"> Above ₹2,000</label>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Customer Rating</strong>
+            <label><input type="checkbox"> 4★ & up</label>
+            <label><input type="checkbox"> 3★ & up</label>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <!-- Sorting bar -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>Showing results for <strong>wireless headphones</strong></div>
+          <div>
+            <label for="sort">Sort by</label>
+            <select id="sort">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Avg. Customer Review</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product listing grid -->
+        <div class="grid">
+          <!-- Product card (repeatable) -->
+          <article class="card" aria-labelledby="p1">
+            <img src="https://via.placeholder.com/200x180?text=Product+1" alt="Product 1">
+            <div id="p1" style="font-weight:600">Wireless Headphones Model A</div>
+            <div class="rating">★★★★☆ (2,345)</div>
+            <div class="price">₹2,499</div>
+            <div class="desc" style="color:#555;font-size:14px">Bluetooth 5.0 | 30h battery | Noise cancelling</div>
+            <button class="add-btn">Add to Cart</button>
+          </article>
+
+          <article class="card" aria-labelledby="p2">
+            <img src="https://via.placeholder.com/200x180?text=Product+2" alt="Product 2">
+            <div id="p2" style="font-weight:600">Wireless Headphones Model B</div>
+            <div class="rating">★★★☆☆ (1,020)</div>
+            <div class="price">₹1,799</div>
+            <div class="desc" style="color:#555;font-size:14px">Lightweight | 20h playback</div>
+            <button class="add-btn">Add to Cart</button>
+          </article>
+
+          <!-- more product cards would follow... replicate as needed -->
+
+          <article class="card" aria-labelledby="p3">
+            <img src="https://via.placeholder.com/200x180?text=Product+3" alt="Product 3">
+            <div id="p3" style="font-weight:600">True Wireless Earbuds X</div>
+            <div class="rating">★★★★☆ (8,732)</div>
+            <div class="price">₹3,199</div>
+            <div class="desc" style="color:#555;font-size:14px">Compact case | Fast charge</div>
+            <button class="add-btn">Add to Cart</button>
+          </article>
+
+        </div>
+
+        <!-- Pagination (simple) -->
+        <div style="margin-top:16px;display:flex;gap:8px;justify-content:center">
+          <button>Prev</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>Next</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="cols">
+          <div style="flex:1;min-width:160px">
+            <h4>Get to Know Us</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Press Releases</a>
+          </div>
+          <div style="flex:1;min-width:160px">
+            <h4>Make Money with Us</h4>
+            <a href="#">Sell on Amazony</a>
+            <a href="#">Advertise Your Products</a>
+          </div>
+          <div style="flex:1;min-width:160px">
+            <h4>Let Us Help You</h4>
+            <a href="#">Your Account</a>
+            <a href="#">Returns Centre</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+        <div style="margin-top:12px;color:#666;font-size:13px">© 2025, Amazony — this is a simplified static structure for learning and demo purposes.</div>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+.history{
+    background-color: blue;
+    text-align: center;
+}
+
+.history h1{
+    color: rgb(30, 175, 8);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.history p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.career{
+    background-color: chocolate;
+}
+.career h3{
+    color: rgb(124, 13, 13);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.career ul li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}

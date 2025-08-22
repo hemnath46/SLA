@@ -1,0 +1,80 @@
+.border {
+    width: 200px;
+    height: 100px;
+    border: 5px solid red;
+    padding: 3%;
+}
+.div1{
+    width: 120px;
+    border: 5px solid black;
+}
+.div2{
+    width: 120px;
+    border: 5px solid black;
+    margin-top: 10px;
+}
+.box{
+    border: 5px solid black;
+    padding: 20px;
+}
+.padding{
+    border: 3px solid black;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+}
+.hema{
+    border: double;
+}
+.boxsize{
+    border: 10px solid black    ;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.nested{
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.nestedbox{
+    border: 3px solid yellow;
+    padding: 10px;
+    margin: 10px;
+}
+.circle{
+    text-align: center;
+    border: 200px solid black;
+    border-radius: 50%;
+    padding: 30px;
+}
+.malai h1{
+    padding: 20px;
+    border: 5px solid black;
+    display: inline-block;
+}
+.hems h1{
+    padding: 20px;
+    border: 5px solid rgb(150, 2, 2);
+    display: inline-block;
+}
+.flex{
+    background-color: rgb(91, 25, 214);
+    display: flex;
+    justify-content: center;        /* horizontal  center*/
+    align-items: center;            /* vertical  center*/
+}
+.bala{
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid red;
+    padding: 20px;
+    margin: 3%;
+    
+}

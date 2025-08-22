@@ -1,0 +1,47 @@
+ .class1 p{
+    background-color: green;
+    display: inline;
+}
+.class2 p{
+    background-color: red;
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+span{
+    background-color: blueviolet;
+    width: 20px;
+    height: 10px;
+}
+.inlineblock{
+    background-color: cadetblue;
+    display: block;
+    width: 200px;
+    height: 50px;
+}
+.nav a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+}
+.vertical img,p{
+   display:inline-block;
+   vertical-align: middle;
+}
+.margin p{
+    background-color: brown;
+    padding: 2%;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+.button{
+    margin: 3%;
+}
+.table input{
+    display: block;
+}

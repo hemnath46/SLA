@@ -1,0 +1,13 @@
+.backgroundimg{
+    background-image: url(../img/chainloob.jpg);
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+}
+.backgroundimg a{
+    text-decoration: none;
+    display: block;
+    /* width: 40%;
+    height: 60%; */
+    background-color: rgb(158, 158, 249);
+    text-align: center
+}
