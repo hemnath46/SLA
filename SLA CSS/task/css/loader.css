@@ -1,0 +1,69 @@
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #000000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+.skeleton {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #b84343 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Focus state animation */
+input:focus {
+    border-color: #4f46e5; 
+     box-shadow: 0 0 10px rgba(79,70,229,0.4);
+     transform: scale(1.02);
+    outline: none; 
+ } 
+/* Active state (when pressing/clicking) */
+input:active {
+    background: #eef2ff;
+    border-color: #000000;
+}
+.container{
+    background-color: #b84343;
+    width: 100%;
+    height: fit-content;
+
+}
+.nav{
+    display: flex;
+    gap: 25px;
+}
+.nav a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bolder;
+}
+.nav a:hover{
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0 5px 15px black;
+    background-color: azure;
+    color: #8d0278;
+    border-radius: 10px;
+}
+
+

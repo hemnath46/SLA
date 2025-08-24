@@ -22,9 +22,9 @@
 .card{
     background-color: rgb(163, 49, 14);
     color: black;
-    padding: 20px;
-    border-radius: 10px;
-    /* height: 170px; */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    height: fit-content;
     width: 360px;
     padding: 10px;
     border: 1px solid black;
