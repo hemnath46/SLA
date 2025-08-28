@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Bootstrap Cheatsheet (Tamil+English)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .main-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .container-fluid { background: #f8f9fa; min-height: 100vh; }
+        .topic-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+        .topic-card:hover { transform: translateY(-5px); }
+        .topic-title {
+            color: #1e3c72;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+        .detail-section { margin-bottom: 1rem; }
+        .class-list {
+            background: #e3f2fd;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border-left: 3px solid #2196f3;
+            margin: 0.5rem 0;
+        }
+        .class-item {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.2rem;
+            font-weight: 500;
+        }
+        .usage-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .example-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            overflow-x: auto;
+        }
+        .live-demo {
+            background: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .dashboard-preview {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+        .mobile-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        @media (max-width: 768px) {
+            .topic-card { padding: 1rem; margin-bottom: 1rem; }
+            .main-header h1 { font-size: 1.8rem; }
+            .example-box { font-size: 0.8rem; }
+        }
+        .tamil-note { 
+            background: #fff8e1; 
+            padding: 0.5rem; 
+            border-radius: 6px; 
+            font-style: italic; 
+            color: #e65100; 
+            margin: 0.3rem 0; 
+        }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Toggle Button -->
+    <button class="mobile-toggle d-md-none" onclick="toggleMobileView()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="container">
+            <h1><i class="fab fa-bootstrap"></i> Complete Bootstrap 5 Cheatsheet</h1>
+            <p class="lead">தமிழ் + English | All Classes, Examples & Live Demos</p>
+            <small>Complete Reference Guide - 2025 Edition</small>
+        </div>
+    </div>
+
+    <!-- Section Navigation -->
+    <div class="section-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#intro" class="btn btn-outline-primary btn-sm m-1">Introduction</a>
+                        <a href="#breakpoints" class="btn btn-outline-primary btn-sm m-1">Breakpoints</a>
+                        <a href="#grid" class="btn btn-outline-primary btn-sm m-1">Grid</a>
+                        <a href="#typography" class="btn btn-outline-primary btn-sm m-1">Typography</a>
+                        <a href="#spacing" class="btn btn-outline-primary btn-sm m-1">Spacing</a>
+                        <a href="#sizing" class="btn btn-outline-primary btn-sm m-1">Sizing</a>
+                        <a href="#colors" class="btn btn-outline-primary btn-sm m-1">Colors</a>
+                        <a href="#components" class="btn btn-outline-primary btn-sm m-1">Components</a>
+                        <a href="#dashboard" class="btn btn-outline-success btn-sm m-1">Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+
+            <!-- 1. Bootstrap Introduction -->
+            <div class="topic-card" id="intro">
+                <h2 class="topic-title"><i class="fab fa-bootstrap text-primary"></i> 1. Bootstrap Introduction</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Bootstrap ஒரு front-end framework. Responsive web design create பண்ண எளிதாக இருக்கும். Ready-made components, grid system, utilities எல்லாம் இருக்கும்.
+                </div>
+                <div class="tamil-note">
+                    🏗️ கட்டிடம் கட்ட ready-made bricks மாதிரி, website கட்ட ready components!
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Reusable components & responsive design, faster development.
+                </div>
+                <div class="example-box">
+&lt;!-- CDN Link --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Basic HTML Structure --&gt;
+&lt;div class="container"&gt;
+    &lt;h1 class="text-center"&gt;Welcome to Bootstrap!&lt;/h1&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- 2. Breakpoints -->
+            <div class="topic-card" id="breakpoints">
+                <h2 class="topic-title"><i class="fas fa-mobile-alt text-info"></i> 2. Breakpoints</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Screen size வரும்போது எத்தனை size‑la எப்படி display ஆகணும் அப்படின்னு, breakpoints நாலா control பண்ணலாம்.
+                </div>
+                <div class="tamil-note">
+                    📱 Mobile, tablet, laptop, desktop - எல்லா device‑லயும் perfect‑ஆ காட்டும்!
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">col-sm-*</span>
+                    <span class="class-item">col-md-*</span>
+                    <span class="class-item">col-lg-*</span>
+                    <span class="class-item">col-xl-*</span>
+                    <span class="class-item">col-xxl-*</span>
+                    <span class="class-item">d-sm-block</span>
+                    <span class="class-item">d-md-none</span>
+                    <span class="class-item">d-lg-flex</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Responsive grid items, hide/show content based on screen size.
+                </div>
+                <div class="example-box">
+&lt;!-- Responsive Columns --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+        Mobile: Full width, Tablet: Half, Desktop: One-third
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Hide/Show on Different Screens --&gt;
+&lt;div class="d-none d-md-block"&gt;Hidden on mobile, visible on tablet+&lt;/div&gt;
+&lt;div class="d-block d-md-none"&gt;Visible on mobile only&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 bg-primary text-white p-2 mb-2">Responsive Column</div>
+                        <div class="col-12 col-md-6 col-lg-4 bg-success text-white p-2 mb-2">Responsive Column</div>
+                        <div class="col-12 col-md-12 col-lg-4 bg-warning text-dark p-2 mb-2">Responsive Column</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Grid System -->
+            <div class="topic-card" id="grid">
+                <h2 class="topic-title"><i class="fas fa-th text-success"></i> 3. Grid System</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> 12-column layout system. Responsive ஆ layout arrange பண்ண, alignment செய்ய.
+                </div>
+                <div class="tamil-note">
+                    🏗️ Page‑ஐ 12 கம்பங்களா பிரிச்சு, அதுல content arrange பண்ணுவோம்!
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">container</span>
+                    <span class="class-item">container-fluid</span>
+                    <span class="class-item">row</span>
+                    <span class="class-item">col</span>
+                    <span class="class-item">col-*</span>
+                    <span class="class-item">col-*-*</span>
+                    <span class="class-item">offset-*</span>
+                    <span class="class-item">order-*</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Page layout, column arrangement, responsive design.
+                </div>
+                <div class="example-box">
+&lt;!-- Basic Grid --&gt;
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-4"&gt;Left Sidebar&lt;/div&gt;
+        &lt;div class="col-8"&gt;Main Content&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Auto Columns --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col"&gt;Auto width&lt;/div&gt;
+    &lt;div class="col"&gt;Auto width&lt;/div&gt;
+    &lt;div class="col"&gt;Auto width&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Offset & Order --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-4 offset-4"&gt;Centered Column&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="row mb-2">
+                        <div class="col-4 bg-info text-white p-2">col-4</div>
+                        <div class="col-8 bg-secondary text-white p-2">col-8</div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col bg-success text-white p-2 me-1">Auto</div>
+                        <div class="col bg-warning text-dark p-2 me-1">Auto</div>
+                        <div class="col bg-danger text-white p-2">Auto</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Typography -->
+            <div class="topic-card" id="typography">
+                <h2 class="topic-title"><i class="fas fa-font text-primary"></i> 4. Typography</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Text headings, alignment, font weights, line heights எல்லாம் ready‑ஆ style பண்ணலாம்.
+                </div>
+                <div class="tamil-note">
+                    ✍️ எழுத்து அழகாக்க எல்லா வசதியும் ready!
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">h1-h6</span>
+                    <span class="class-item">display-*</span>
+                    <span class="class-item">lead</span>
+                    <span class="class-item">small</span>
+                    <span class="class-item">text-start</span>
+                    <span class="class-item">text-center</span>
+                    <span class="class-item">text-end</span>
+                    <span class="class-item">fw-bold</span>
+                    <span class="class-item">fw-normal</span>
+                    <span class="class-item">fst-italic</span>
+                    <span class="class-item">text-uppercase</span>
+                    <span class="class-item">text-lowercase</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Headings, paragraph styling, text alignment, emphasis.
+                </div>
+                <div class="example-box">
+&lt;!-- Headings --&gt;
+&lt;h1 class="display-4"&gt;Large Display Heading&lt;/h1&gt;
+&lt;h2 class="text-center text-primary"&gt;Centered Blue Heading&lt;/h2&gt;
+
+&lt;!-- Paragraph --&gt;
+&lt;p class="lead"&gt;Lead paragraph - stands out&lt;/p&gt;
+&lt;p class="fw-bold text-uppercase"&gt;Bold uppercase text&lt;/p&gt;
+
+&lt;!-- Inline Elements --&gt;
+&lt;p&gt;This is &lt;mark&gt;highlighted&lt;/mark&gt; and &lt;small&gt;small text&lt;/small&gt;&lt;/p&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <h1 class="display-6 text-center text-primary">Display Heading</h1>
+                    <p class="lead">This is a lead paragraph that stands out.</p>
+                    <p class="fw-bold">Bold text</p>
+                    <p class="text-center fst-italic">Centered italic text</p>
+                </div>
+            </div>
+
+            <!-- 5. Spacing -->
+            <div class="topic-card" id="spacing">
+                <h2 class="topic-title"><i class="fas fa-arrows-alt text-warning"></i> 5. Spacing (Margins & Paddings)</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> m-* (margin), p-* (padding). mt-3 (margin-top 1rem), px-4 (padding left & right 1.5rem).
+                </div>
+                <div class="tamil-note">
+                    📏 Element‑களுக்கு இடையில இடம் விட்டு, neat‑ஆ arrange பண்ணலாம்!
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">m-*</span>
+                    <span class="class-item">p-*</span>
+                    <span class="class-item">mt-*</span>
+                    <span class="class-item">mb-*</span>
+                    <span class="class-item">ms-*</span>
+                    <span class="class-item">me-*</span>
+                    <span class="class-item">mx-*</span>
+                    <span class="class-item">my-*</span>
+                    <span class="class-item">pt-*</span>
+                    <span class="class-item">pb-*</span>
+                    <span class="class-item">ps-*</span>
+                    <span class="class-item">pe-*</span>
+                    <span class="class-item">px-*</span>
+                    <span class="class-item">py-*</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Box spacing, element positioning, layout control.
+                    <br><strong>Values:</strong> 0, 1 (0.25rem), 2 (0.5rem), 3 (1rem), 4 (1.5rem), 5 (3rem), auto
+                </div>
+                <div class="example-box">
+&lt;!-- Margin Examples --&gt;
+&lt;div class="mt-3 mb-2"&gt;Top margin 1rem, bottom margin 0.5rem&lt;/div&gt;
+&lt;div class="mx-auto"&gt;Horizontally centered&lt;/div&gt;
+&lt;div class="my-5"&gt;Large top and bottom margins&lt;/div&gt;
+
+&lt;!-- Padding Examples --&gt;
+&lt;div class="p-3 bg-light"&gt;Padding all sides&lt;/div&gt;
+&lt;div class="px-4 py-2 bg-info"&gt;Different horizontal/vertical padding&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="mt-3 mb-2 p-3 bg-light border">mt-3 mb-2 p-3</div>
+                    <div class="mx-auto my-2 p-2 bg-primary text-white" style="width: 200px;">mx-auto (centered)</div>
+                    <div class="px-4 py-2 bg-success text-white">px-4 py-2</div>
+                </div>
+            </div>
+
+            <!-- 6. Sizing -->
+            <div class="topic-card" id="sizing">
+                <h2 class="topic-title"><i class="fas fa-expand-arrows-alt text-info"></i> 6. Sizing</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Element width/height control. w-* (width), h-* (height).
+                </div>
+                <div class="tamil-note">
+                    📐 Element‑ன் size control பண்ண!
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">w-25</span>
+                    <span class="class-item">w-50</span>
+                    <span class="class-item">w-75</span>
+                    <span class="class-item">w-100</span>
+                    <span class="class-item">w-auto</span>
+                    <span class="class-item">h-25</span>
+                    <span class="class-item">h-50</span>
+                    <span class="class-item">h-75</span>
+                    <span class="class-item">h-100</span>
+                    <span class="class-item">h-auto</span>
+                    <span class="class-item">mw-100</span>
+                    <span class="class-item">mh-100</span>
+                    <span class="class-item">vw-100</span>
+                    <span class="class-item">vh-100</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Control element dimensions, responsive sizing.
+                </div>
+                <div class="example-box">
+&lt;!-- Width Examples --&gt;
+&lt;div class="w-25 bg-primary"&gt;25% width&lt;/div&gt;
+&lt;div class="w-50 bg-success"&gt;50% width&lt;/div&gt;
+&lt;div class="w-100 bg-danger"&gt;100% width&lt;/div&gt;
+
+&lt;!-- Height Examples --&gt;
+&lt;div style="height: 200px;"&gt;
+    &lt;div class="h-50 bg-warning"&gt;50% height of parent&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Viewport Units --&gt;
+&lt;div class="vw-100 vh-100"&gt;Full viewport&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="w-25 bg-primary text-white p-2 mb-1">w-25 (25%)</div>
+                    <div class="w-50 bg-success text-white p-2 mb-1">w-50 (50%)</div>
+                    <div class="w-75 bg-warning text-dark p-2 mb-1">w-75 (75%)</div>
+                    <div class="w-100 bg-danger text-white p-2">w-100 (100%)</div>
+                </div>
+            </div>
+
+            <!-- 7. Colors & Backgrounds -->
+            <div class="topic-card" id="colors">
+                <h2 class="topic-title"><i class="fas fa-palette text-danger"></i> 7. Colors & Backgrounds</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Text color, background colors கு ready palette.
+                </div>
+                <div class="tamil-note">
+                    🎨 அழகான colors ready‑ஆ இருக்கு, choose பண்ணி use பண்ணுங்க!
+                </div>
+                <div class="class-list">
+                    <strong>Text Colors:</strong><br>
+                    <span class="class-item">text-primary</span>
+                    <span class="class-item">text-secondary</span>
+                    <span class="class-item">text-success</span>
+                    <span class="class-item">text-danger</span>
+                    <span class="class-item">text-warning</span>
+                    <span class="class-item">text-info</span>
+                    <span class="class-item">text-light</span>
+                    <span class="class-item">text-dark</span>
+                    <span class="class-item">text-muted</span>
+                    <span class="class-item">text-white</span>
+                    <br><br>
+                    <strong>Background Colors:</strong><br>
+                    <span class="class-item">bg-primary</span>
+                    <span class="class-item">bg-secondary</span>
+                    <span class="class-item">bg-success</span>
+                    <span class="class-item">bg-danger</span>
+                    <span class="class-item">bg-warning</span>
+                    <span class="class-item">bg-info</span>
+                    <span class="class-item">bg-light</span>
+                    <span class="class-item">bg-dark</span>
+                    <span class="class-item">bg-white</span>
+                    <span class="class-item">bg-transparent</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Text coloring, background styling, theme consistency.
+                </div>
+                <div class="example-box">
+&lt;!-- Text Colors --&gt;
+&lt;p class="text-primary"&gt;Primary blue text&lt;/p&gt;
+&lt;p class="text-success"&gt;Success green text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger red text&lt;/p&gt;
+
+&lt;!-- Background Colors --&gt;
+&lt;div class="bg-warning text-dark p-3"&gt;Warning background&lt;/div&gt;
+&lt;div class="bg-success text-white p-3"&gt;Success background&lt;/div&gt;
+
+&lt;!-- Combination --&gt;
+&lt;div class="bg-dark text-light p-3"&gt;Dark theme style&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="row">
+                        <div class="col-3 bg-primary text-white p-2 text-center">Primary</div>
+                        <div class="col-3 bg-success text-white p-2 text-center">Success</div>
+                        <div class="col-3 bg-warning text-dark p-2 text-center">Warning</div>
+                        <div class="col-3 bg-danger text-white p-2 text-center">Danger</div>
+                    </div>
+                    <p class="text-primary mt-2">Primary text color</p>
+                    <p class="text-success">Success text color</p>
+                    <p class="text-muted">Muted text color</p>
+                </div>
+            </div>
+
+            <!-- 8. Borders & Radius -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-square text-secondary"></i> 8. Borders & Radius</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Element‑க்கு border add பண்ணுவதும், rounded corners தருவதும்.
+                </div>
+                <div class="class-list">
+                    <strong>Border Classes:</strong><br>
+                    <span class="class-item">border</span>
+                    <span class="class-item">border-0</span>
+                    <span class="class-item">border-top</span>
+                    <span class="class-item">border-end</span>
+                    <span class="class-item">border-bottom</span>
+                    <span class="class-item">border-start</span>
+                    <span class="class-item">border-primary</span>
+                    <span class="class-item">border-success</span>
+                    <span class="class-item">border-danger</span>
+                    <br><br>
+                    <strong>Rounded Classes:</strong><br>
+                    <span class="class-item">rounded</span>
+                    <span class="class-item">rounded-0</span>
+                    <span class="class-item">rounded-1</span>
+                    <span class="class-item">rounded-2</span>
+                    <span class="class-item">rounded-3</span>
+                    <span class="class-item">rounded-circle</span>
+                    <span class="class-item">rounded-pill</span>
+                    <span class="class-item">rounded-top</span>
+                    <span class="class-item">rounded-end</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Element borders, rounded corners, shape styling.
+                </div>
+                <div class="example-box">
+&lt;!-- Basic Borders --&gt;
+&lt;div class="border p-3"&gt;Default border&lt;/div&gt;
+&lt;div class="border border-primary p-3"&gt;Primary colored border&lt;/div&gt;
+&lt;div class="border-top border-bottom p-3"&gt;Top and bottom border only&lt;/div&gt;
+
+&lt;!-- Rounded Corners --&gt;
+&lt;img src="image.jpg" class="rounded-circle" width="50"&gt;
+&lt;button class="btn btn-primary rounded-pill"&gt;Pill Button&lt;/button&gt;
+&lt;div class="bg-light p-3 rounded-3"&gt;Large rounded corners&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="d-flex gap-2 mb-2">
+                        <div class="border p-2">border</div>
+                        <div class="border border-primary p-2">border-primary</div>
+                        <div class="border-top border-bottom p-2">top-bottom</div>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="bg-primary rounded-circle" style="width:50px;height:50px;"></div>
+                        <div class="bg-success rounded-pill p-2">rounded-pill</div>
+                        <div class="bg-warning rounded-3 p-2">rounded-3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Shadows -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-layer-group text-info"></i> 9. Shadows</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Element‑க்கு shadow effects, depth தர.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">shadow</span>
+                    <span class="class-item">shadow-sm</span>
+                    <span class="class-item">shadow-lg</span>
+                    <span class="class-item">shadow-none</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Add depth, create pop-out effects, modern design.
+                </div>
+                <div class="example-box">
+&lt;div class="shadow p-3 mb-3 bg-white"&gt;Default shadow&lt;/div&gt;
+&lt;div class="shadow-sm p-3 mb-3 bg-white"&gt;Small shadow&lt;/div&gt;
+&lt;div class="shadow-lg p-3 mb-3 bg-white"&gt;Large shadow&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="d-flex gap-3">
+                        <div class="shadow-sm p-3 bg-white">shadow-sm</div>
+                        <div class="shadow p-3 bg-white">shadow</div>
+                        <div class="shadow-lg p-3 bg-white">shadow-lg</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Buttons -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-mouse-pointer text-success"></i> 10. Buttons</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Various button styles, sizes, states.
+                </div>
+                <div class="class-list">
+                    <strong>Button Types:</strong><br>
+                    <span class="class-item">btn</span>
+                    <span class="class-item">btn-primary</span>
+                    <span class="class-item">btn-secondary</span>
+                    <span class="class-item">btn-success</span>
+                    <span class="class-item">btn-danger</span>
+                    <span class="class-item">btn-warning</span>
+                    <span class="class-item">btn-info</span>
+                    <span class="class-item">btn-light</span>
+                    <span class="class-item">btn-dark</span>
+                    <span class="class-item">btn-link</span>
+                    <br><br>
+                    <strong>Outline Buttons:</strong><br>
+                    <span class="class-item">btn-outline-primary</span>
+                    <span class="class-item">btn-outline-success</span>
+                    <span class="class-item">btn-outline-danger</span>
+                    <br><br>
+                    <strong>Sizes & States:</strong><br>
+                    <span class="class-item">btn-lg</span>
+                    <span class="class-item">btn-sm</span>
+                    <span class="class-item">disabled</span>
+                    <span class="class-item">active</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> User actions, form submissions, navigation.
+                </div>
+                <div class="example-box">
+&lt;!-- Basic Buttons --&gt;
+&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success Button&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger Button&lt;/button&gt;
+
+&lt;!-- Outline Buttons --&gt;
+&lt;button class="btn btn-outline-primary"&gt;Outline Primary&lt;/button&gt;
+
+&lt;!-- Sizes --&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large Button&lt;/button&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Small Button&lt;/button&gt;
+
+&lt;!-- States --&gt;
+&lt;button class="btn btn-primary disabled"&gt;Disabled&lt;/button&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="mb-2">
+                        <button class="btn btn-primary me-2">Primary</button>
+                        <button class="btn btn-success me-2">Success</button>
+                        <button class="btn btn-danger me-2">Danger</button>
+                        <button class="btn btn-warning me-2">Warning</button>
+                    </div>
+                    <div class="mb-2">
+                        <button class="btn btn-outline-primary me-2">Outline Primary</button>
+                        <button class="btn btn-outline-success me-2">Outline Success</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-lg me-2">Large</button>
+                        <button class="btn btn-primary me-2">Normal</button>
+                        <button class="btn btn-primary btn-sm">Small</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Components Section Header -->
+            <div class="topic-card" id="components">
+                <h1 class="text-center text-primary">Bootstrap Components</h1>
+                <p class="text-center lead">Ready-to-use UI components</p>
+            </div>
+
+            <!-- 11. Navbar -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-bars text-primary"></i> 11. Navbar</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Responsive navigation header, brand, links, toggle button.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">navbar</span>
+                    <span class="class-item">navbar-brand</span>
+                    <span class="class-item">navbar-nav</span>
+                    <span class="class-item">nav-item</span>
+                    <span class="class-item">nav-link</span>
+                    <span class="class-item">navbar-toggler</span>
+                    <span class="class-item">navbar-expand-lg</span>
+                    <span class="class-item">navbar-light</span>
+                    <span class="class-item">navbar-dark</span>
+                    <span class="class-item">fixed-top</span>
+                    <span class="class-item">sticky-top</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Site navigation, branding, mobile menu.
+                </div>
+                <div class="example-box">
+&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+    &lt;div class="container"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;MyWebsite&lt;/a&gt;
+        
+        &lt;button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Demo Site</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="demoNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Services</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- 12. Cards -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-id-card text-info"></i> 12. Cards</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Flexible content container - header, body, footer, images.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">card</span>
+                    <span class="class-item">card-header</span>
+                    <span class="class-item">card-body</span>
+                    <span class="class-item">card-footer</span>
+                    <span class="class-item">card-title</span>
+                    <span class="class-item">card-subtitle</span>
+                    <span class="class-item">card-text</span>
+                    <span class="class-item">card-img-top</span>
+                    <span class="class-item">card-img-bottom</span>
+                    <span class="class-item">card-group</span>
+                    <span class="class-item">card-deck</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Product displays, user profiles, content blocks.
+                </div>
+                <div class="example-box">
+&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;img src="image.jpg" class="card-img-top" alt="..."&gt;
+    &lt;div class="card-header"&gt;
+        Featured
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;
+        &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Card subtitle&lt;/h6&gt;
+        &lt;p class="card-text"&gt;Some quick example text.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer text-muted"&gt;
+        2 days ago
+    &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    Product
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Amazing Product</h5>
+                                    <p class="card-text">This is a great product with amazing features.</p>
+                                    <a href="#" class="btn btn-success">Buy Now</a>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    ₹999 only
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Forms -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-wpforms text-warning"></i> 13. Forms</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Input elements, validation, layouts.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">form-control</span>
+                    <span class="class-item">form-label</span>
+                    <span class="class-item">form-text</span>
+                    <span class="class-item">form-select</span>
+                    <span class="class-item">form-check</span>
+                    <span class="class-item">form-check-input</span>
+                    <span class="class-item">form-check-label</span>
+                    <span class="class-item">form-floating</span>
+                    <span class="class-item">input-group</span>
+                    <span class="class-item">is-valid</span>
+                    <span class="class-item">is-invalid</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> User input, data collection, validation.
+                </div>
+                <div class="example-box">
+&lt;form&gt;
+    &lt;!-- Basic Input --&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="email"&gt;
+        &lt;div class="form-text"&gt;We'll never share your email.&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Select Dropdown --&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="country" class="form-label"&gt;Country&lt;/label&gt;
+        &lt;select class="form-select" id="country"&gt;
+            &lt;option selected&gt;Choose...&lt;/option&gt;
+            &lt;option value="in"&gt;India&lt;/option&gt;
+            &lt;option value="us"&gt;USA&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Checkboxes --&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" id="terms"&gt;
+        &lt;label class="form-check-label" for="terms"&gt;
+            Accept terms and conditions
+        &lt;/label&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <form>
+                        <div class="mb-3">
+                            <label for="demoEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="demoEmail" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="demoSelect" class="form-label">Select Option</label>
+                            <select class="form-select" id="demoSelect">
+                                <option selected>Choose...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="demoCheck">
+                            <label class="form-check-label" for="demoCheck">
+                                Check me out
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 14. Modals -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-window-restore text-secondary"></i> 14. Modals</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Popup dialogs, confirmations, forms.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">modal</span>
+                    <span class="class-item">modal-dialog</span>
+                    <span class="class-item">modal-content</span>
+                    <span class="class-item">modal-header</span>
+                    <span class="class-item">modal-title</span>
+                    <span class="class-item">modal-body</span>
+                    <span class="class-item">modal-footer</span>
+                    <span class="class-item">modal-lg</span>
+                    <span class="class-item">modal-sm</span>
+                    <span class="class-item">modal-xl</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Confirmations, forms, detailed views.
+                </div>
+                <div class="example-box">
+&lt;!-- Button to trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Launch Modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleModal"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title"&gt;Modal Title&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                Modal content goes here...
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+                        Open Demo Modal
+                    </button>
+                    <div class="modal fade" id="demoModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Demo Modal</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This is a demo modal. You can put any content here!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Tables -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-table text-success"></i> 15. Tables</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Styled data tables, responsive tables.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">table</span>
+                    <span class="class-item">table-striped</span>
+                    <span class="class-item">table-bordered</span>
+                    <span class="class-item">table-hover</span>
+                    <span class="class-item">table-dark</span>
+                    <span class="class-item">table-light</span>
+                    <span class="class-item">table-responsive</span>
+                    <span class="class-item">table-sm</span>
+                    <span class="class-item">table-primary</span>
+                    <span class="class-item">table-success</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Data display, reports, lists.
+                </div>
+                <div class="example-box">
+&lt;div class="table-responsive"&gt;
+    &lt;table class="table table-striped table-hover"&gt;
+        &lt;thead class="table-dark"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;#&lt;/th&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+                &lt;th&gt;Status&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;John Doe&lt;/td&gt;
+                &lt;td&gt;john@example.com&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-success"&gt;Active&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;Jane Smith&lt;/td&gt;
+                &lt;td&gt;jane@example.com&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-warning"&gt;Pending&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Laptop</td>
+                                    <td>₹50,000</td>
+                                    <td><span class="badge bg-success">In Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Phone</td>
+                                    <td>₹25,000</td>
+                                    <td><span class="badge bg-warning">Low Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Tablet</td>
+                                    <td>₹15,000</td>
+                                    <td><span class="badge bg-danger">Out of Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Alerts & Badges -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-exclamation-triangle text-warning"></i> 16. Alerts & Badges</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Message notifications and small indicators.
+                </div>
+                <div class="class-list">
+                    <strong>Alert Classes:</strong><br>
+                    <span class="class-item">alert</span>
+                    <span class="class-item">alert-primary</span>
+                    <span class="class-item">alert-success</span>
+                    <span class="class-item">alert-danger</span>
+                    <span class="class-item">alert-warning</span>
+                    <span class="class-item">alert-info</span>
+                    <span class="class-item">alert-dismissible</span>
+                    <br><br>
+                    <strong>Badge Classes:</strong><br>
+                    <span class="class-item">badge</span>
+                    <span class="class-item">bg-primary</span>
+                    <span class="class-item">bg-success</span>
+                    <span class="class-item">bg-danger</span>
+                    <span class="class-item">rounded-pill</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Notifications, status indicators, counts.
+                </div>
+                <div class="example-box">
+&lt;!-- Alerts --&gt;
+&lt;div class="alert alert-success" role="alert"&gt;
+    Success! Your task has been completed.
+&lt;/div&gt;
+&lt;div class="alert alert-danger alert-dismissible" role="alert"&gt;
+    Error! Something went wrong.
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Badges --&gt;
+&lt;h4&gt;Notifications &lt;span class="badge bg-danger"&gt;4&lt;/span&gt;&lt;/h4&gt;
+&lt;span class="badge bg-success rounded-pill"&gt;New&lt;/span&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Well done!</strong> You successfully read this important alert message.
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                    <p>Messages <span class="badge bg-primary">5</span></p>
+                    <p>Status: <span class="badge bg-success rounded-pill">Active</span></p>
+                </div>
+            </div>
+
+            <!-- 17. Flex Utilities -->
+            <div class="topic-card">
+                <h2 class="topic-title"><i class="fas fa-arrows-alt text-primary"></i> 17. Flex Utilities</h2>
+                <div class="detail-section">
+                    <strong>Detail:</strong> Flexbox-based layout control, alignment.
+                </div>
+                <div class="class-list">
+                    <strong>Classes:</strong><br>
+                    <span class="class-item">d-flex</span>
+                    <span class="class-item">d-inline-flex</span>
+                    <span class="class-item">flex-row</span>
+                    <span class="class-item">flex-column</span>
+                    <span class="class-item">flex-row-reverse</span>
+                    <span class="class-item">flex-column-reverse</span>
+                    <span class="class-item">justify-content-start</span>
+                    <span class="class-item">justify-content-center</span>
+                    <span class="class-item">justify-content-end</span>
+                    <span class="class-item">justify-content-between</span>
+                    <span class="class-item">justify-content-around</span>
+                    <span class="class-item">align-items-start</span>
+                    <span class="class-item">align-items-center</span>
+                    <span class="class-item">align-items-end</span>
+                    <span class="class-item">flex-wrap</span>
+                    <span class="class-item">flex-nowrap</span>
+                </div>
+                <div class="usage-box">
+                    <strong>Usage:</strong> Modern layouts, alignment, spacing.
+                </div>
+                <div class="example-box">
+&lt;!-- Center Content --&gt;
+&lt;div class="d-flex justify-content-center align-items-center" style="height: 200px;"&gt;
+    &lt;div&gt;Perfectly Centered&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Space Between --&gt;
+&lt;div class="d-flex justify-content-between"&gt;
+    &lt;div&gt;Left&lt;/div&gt;
+    &lt;div&gt;Center&lt;/div&gt;
+    &lt;div&gt;Right&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Column Layout --&gt;
+&lt;div class="d-flex flex-column align-items-center"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+                <div class="live-demo">
+                    <strong>Live Demo:</strong>
+                    <div class="border p-3 mb-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-primary text-white p-2">Left</div>
+                            <div class="bg-success text-white p-2">Center</div>
+                            <div class="bg-danger text-white p-2">Right</div>
+                        </div>
+                    </div>
+                    <div class="border p-3 d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <div class="bg-warning p-2">Centered Content</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Example -->
+            <div class="dashboard-preview" id="dashboard">
+                <h1 class="text-center mb-4"><i class="fas fa-tachometer-alt text-primary"></i> Bootstrap Dashboard Example</h1>
+                <p class="text-center text-muted mb-4">Complete responsive dashboard layout using Bootstrap components</p>
+                
+                <!-- Dashboard Header -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><i class="fas fa-chart-line me-2"></i>Dashboard</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="dashboardNav">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Reports</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Analytics</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex">
+                                <span class="navbar-text me-3">Welcome, Admin</span>
+                                <button class="btn btn-outline-light btn-sm">Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Stats Cards Row -->
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h4>2,540</h4>
+                                        <p class="mb-0">Total Users</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-users fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h4>₹1,25,000</h4>
+                                        <p class="mb-0">Revenue</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-rupee-sign fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h4>847</h4>
+                                        <p class="mb-0">Orders</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-shopping-cart fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h4>95%</h4>
+                                        <p class="mb-0">Performance</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-chart-bar fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Row -->
+                <div class="row">
+                    <!-- Recent Orders -->
+                    <div class="col-lg-8 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title mb-0"><i class="fas fa-list me-2"></i>Recent Orders</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer</th>
+                                                <th>Product</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#001</td>
+                                                <td>Rajesh Kumar</td>
+                                                <td>Laptop</td>
+                                                <td>₹45,000</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#002</td>
+                                                <td>Priya Sharma</td>
+                                                <td>Phone</td>
+                                                <td>₹25,000</td>
+                                                <td><span class="badge bg-warning">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#003</td>
+                                                <td>Arjun Reddy</td>
+                                                <td>Headphones</td>
+                                                <td>₹3,500</td>
+                                                <td><span class="badge bg-info">Processing</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title mb-0"><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-plus me-2"></i>Add New Product
+                                    </button>
+                                    <button class="btn btn-success">
+                                        <i class="fas fa-file-export me-2"></i>Export Report
+                                    </button>
+                                    <button class="btn btn-info">
+                                        <i class="fas fa-cog me-2"></i>Settings
+                                    </button>
+                                    <button class="btn btn-warning">
+                                        <i class="fas fa-bell me-2"></i>Notifications
+                                        <span class="badge bg-danger ms-2">3</span>
+                                    </button>
+                                </div>
+
+                                <!-- Progress Bars -->
+                                <hr>
+                                <h6>Monthly Goals</h6>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <small>Sales Target</small>
+                                        <small>75%</small>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <small>User Growth</small>
+                                        <small>60%</small>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerts Section -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>டாஷ்போர்ட் முடிந்தது!</strong> இது Bootstrap components பயன்படுத்தி கட்டப்பட்ட responsive dashboard example.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg-dark text-white text-center py-4 mt-5">
+                <div class="container">
+                    <p>&copy; 2025 Bootstrap Cheatsheet. Created with ❤️ for developers.</p>
+                    <p class="small">தமிழ் + English மிக்ஸ் documentation | All Bootstrap 5 classes covered</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Mobile view toggle function
+        function toggleMobileView() {
+            // Toggle mobile-friendly view
+            document.body.classList.toggle('mobile-view');
+            
+            // Example mobile adjustments
+            const cards = document.querySelectorAll('.topic-card');
+            cards.forEach(card => {
+                card.classList.toggle('mobile-card');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some dynamic interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight current section in navigation
+            const sections = document.querySelectorAll('.topic-card[id]');
+            const navLinks = document.querySelectorAll('.section-nav a');
+            
+            function highlightNavLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNavLink);
+        });
+    </script>
+
+    <style>
+        /* Additional Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .mobile-card {
+                transform: none !important;
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            
+            .dashboard-preview {
+                padding: 1rem;
+            }
+            
+            .class-item {
+                font-size: 0.75rem;
+                padding: 0.1rem 0.4rem;
+            }
+            
+            .example-box {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+            
+            .stats-card {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Enhanced Mobile Toggle Button */
+        .mobile-toggle:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+        
+        /* Navigation Active State */
+        .section-nav a.active {
+            background: #007bff;
+            color: white;
+        }
+        
+        /* Progress Bar Animation */
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        /* Card Hover Effects */
+        .card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
+
+</body>
+</html>
