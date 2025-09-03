@@ -28,6 +28,28 @@
     color: black;
     cursor: pointer;
 }
+.nav-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(47, 46, 46);
+}
+.nav-content a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.721);
+    text-decoration: none;
+}
+.nav-content a:hover{
+    color: rgba(255, 255, 255, 0.721);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1.15);
+}
 .container{
     display: flex;
     justify-content: center;
