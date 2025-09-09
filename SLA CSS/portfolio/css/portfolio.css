@@ -52,6 +52,19 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-left: 200px  ;
 }
+.project:hover{
+    box-shadow: 0 5px 15px rgb(255, 255, 255); 
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.project h2:hover{
+    background-color: blanchedalmond;
+    border-radius: 8px;
+    color: black;
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+}
 .project a{
     text-decoration: none;
     color: black;
@@ -66,12 +79,12 @@
 }
 .container4{
     padding: 20px;
-    text-align: center;
+    text-align: center; 
 }
 .container4 a:hover{
-    background-color: black;
+    background-color: blanchedalmond;
     border-radius: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 30px;
     height: 20px;
     box-shadow: 0 5px 15px rgb(255, 255, 255); 
