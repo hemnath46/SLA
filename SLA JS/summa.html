@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform" method="post" action="abx.php" onsubmit="demo()">
+        <label for="">Name :</label>
+        <input type="text" name="name" placeholder="enter name"><br><br>
+        <label title="">Password :</label>
+        <input type="password" name="password" placeholder="password">
+        <input type="button" value="submit" onclick="demo()">
+    </form>
+</body>
+<script>
+    function demo() {
+        var name = document.myform.name.value
+        var password = document.myform.password.value
+         if (name == "" || name == null || name.length<4) {
+            alert('name cant be empty');
+            return false;
+        }
+        else if(password.length <= 8){
+            alert('password must be 8 char')
+        }
+        return true;
+    }
+</script>
+</html>

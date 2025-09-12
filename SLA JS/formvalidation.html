@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+
+<body>
+    <form name="myform" method="post" action="abx.php">
+        <label for="">Name :</label>
+        <input type="text" name="name" placeholder="enter name"> <br><br>
+        <label title="">Password :</label>
+        <input type="password" name="password" placeholder="password"> <br><br>
+        <label for="">Contact :</label>
+        <input type="text" name="contact"><br><br>
+        <label for="">Email :</label>
+        <input type="email" name="email"><br><br>
+        <input type="button" value="submit" onclick="demo()">
+    </form>
+</body>
+<script>
+    function demo() {
+        var name = document.myform.name.value
+        var password = document.myform.password.value
+        var contact = document.myform.contact.value
+        var contact = document.myform.email.valu
+        if (name == "" || name == null) {
+            alert('name cant be empty');
+            return false;
+        }
+        else if (password.length <= 8) {
+            alert('password length must be above 8 character');
+            return false;
+        }
+        else if (contact.length < 9) {
+            alert('contact must have 10 numbers')
+            return false;
+        }
+        else if (email) {
+            alert('invaild email')
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</html>
+<!-- syntax
+var num=document.formname.name.value 
+-->
+
+
+<!-- number validation:
+ var num=document.myform.num.value
+ if(isNaN(num))
+ return false;
+
+ form name=myform action= method=
+ input num
+ input sub
+
+  -->
+
+<!-- task
+  email validation
+  smaller upper case lowerconvert
+  string inbuild 
+  -->
+
+
+<!-- test quest:
+1. declare a variable with let const examples.
+let name=null;
+{
+    console.log(name)
+}
+const course=['java','python','javascript']
+{
+    console.log(course)
+}
+
+2. diff btw == and === with example.
+
+== eg:
+let a=10;
+let b=10;
+if(a==b){
+console.log('true')
+}
+elase{
+console.log('false')
+}
+
+=== eg:
+let i=10;
+let j='10'
+if(i===j){
+console.log('true')
+}
+else{
+console.log('false')
+}
+
+3. how will you declare your control statement.
+
+if(consition){
+print statement
+}
+
+4. do a program of calculater with arithmetic operator.
+
+let number=20;
+if(num<15 && num<=20){
+    console.log('true')
+}
+else{
+    console.log('false')
+}
+
+5. diff btw return keyword and function call with example.
+
+pannala
+
+6. differentiate onsubmit and onclick html events.
+summa.html
+
+7. validation a password length must be above  9character.
+
+var password = document.myform.password.value
+
+if (password.length <= 8) {
+        alert('password length must be above 8 character');
+        return false;
+    }
+    else{
+    alert('password')
+    }
+} 
+8. syntax for forloop print='artificial' string 
+
+
+let str=['artificial']; 
+for(let i=str.length-1;i>=0;i--) 
+{ 
+    console.log(str[i]) 
+}
+
+9. reverse a for loop from 50 to 1.
+
+let no=50;
+    for(let n=no; n>=0 ; n--){
+        console.log(n)
+    }
+-->
