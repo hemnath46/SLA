@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let name='';
+    // while(name==''){
+    //     name=window.prompt('enter the string')
+    //     console.log('hello ${name}')
+    // }
+
+
+    // let food='';
+    // while(food!='s'){
+    //     food=prompt('enter your food')
+    // }
+
+    // do while loop:
+    // it is exit controled loop
+
+    // let start=1;
+    // do{
+    //     console.log(start)
+    //     start++;
+    // }
+    // while(start<=100)
+
+    // let productname='';
+    // let productprice=40;
+    // total +=productprice;
+    // while (true) {
+    //     productname = prompt("Enter product name");
+    //     if (productname === "stop") break;
+
+    //     productprice = prompt("Enter price:");
+    //     productprice = Number(productprice);
+    //     total += productprice;
+
+    //     alert("You entered price: " + productprice + "\nCurrent Total: " + total);
+    // }
+
+    // alert("Final Total = " + total);
+
+
+    let productname='';
+    let productprice=0; 
+    total = 0;
+
+    while (true) {
+        productname = prompt("Enter product name");
+        if (productname === "stop") break;
+
+        productprice = prompt("Enter price:");
+        if(productprice===0) break;
+        productprice = Number(productprice);
+        total += productprice;
+
+        alert("You entered price: " + productprice + "\nCurrent Total: " + total);
+    }
+
+
+
+
+</script>
+
+</html>

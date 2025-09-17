@@ -7,7 +7,8 @@ let personname='hemnath';
 let status=false;
 {
     console.log(status)
-    console.log(typeof(status))
+    console.log(typeof(status)) 
+    // typeof() is kown has inbuild function/method
 }
 
 let name=null;

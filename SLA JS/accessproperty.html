@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">hello javascript</h1>
+</body>
+<script>
+    let message='hello javascript';
+    document.getElementById('head').innerHTML=message;
+                    // or
+    // let message=document.getElementById('head')
+    // message.innerHTML='first dom element';
+                    // or
+    // let element=dosument.getElementById('head');
+    // console.log(element);
+
+    let element=document.getElementById('head');
+    // to view element tag in html
+    console.log(element.textContent);
+    // to add textcontent
+    element.textContent += 'add me to javascript page';
+</script>
+</html>

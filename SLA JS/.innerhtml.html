@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgb(229, 233, 235);
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 5px;
+        }
+
+        #main-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .list {
+            padding: 20px;
+        }
+
+        .list li {
+            list-style-type: none;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+        }
+
+        .list-items:hover {
+            background-color: #c5c9ca;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="main-heading">TOP 5 IT Companies</h1>
+        <ul class="list">
+            <li class="list-items">Cognizant</li>
+            <li class="list-items">Zoho</li>
+            <li class="list-items">Netflix</li>
+            <li class="list-items">Google</li>
+            <li class="list-items">Amazon</li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="container">
+        <h1 id="main-heading">TOP 5 IT Companies</h1>
+        <ul class="list">
+            <li class="list-items">Cognizant</li>
+            <li class="list-items">Zoho</li>
+            <li class="list-items">Netflix</li>
+            <li class="list-items">Google</li>
+            <li class="list-items">Amazon</li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelector('li')
+        // dom methods
+        const title = document.getElementById('main-heading');
+        console.log(title);
+
+        const title1 = document.getElementsByClassName('list-items');
+        console.log(title1);
+
+        const title2 = document.getElementsByTagName('li');
+        console.log(title2);
+
+        const title3 = document.querySelector('div');
+        console.log(title3);
+
+        const title4 = document.querySelectorAll('div');
+        console.log(title4);
+
+        const listitems = document.querySelectorAll('.list-items');
+        for (i = 0; i < listitems.length; i++) {
+            listitems[i].style.fontsize = '5em';
+        }
+        console.log('listitems')
+        // a query selector means returns the matches that css style as
+    </script>
+</body>
+
+</html>

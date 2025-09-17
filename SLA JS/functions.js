@@ -1,0 +1,56 @@
+// function:
+// it is a block of code
+// which is going to perform a specific task when an event triggers.
+// a function performs meaningful task or an action when it is called
+
+// a function is consists of with parameters and without parameters
+// with parameter call by value
+// without parameter call by reference
+
+// syntax for declaring a function
+// function functionname(n no of paarameters)
+// {
+// black od code
+// }
+// function call(n no of agruments)
+
+// eg:
+// function without parameters:
+// call by reference
+
+// function msg(){
+//     alert('welcome to function')
+// }
+// msg()
+// msg()
+// it show alert 2 times
+
+// function with parameters:
+// call by reference
+
+// function status(from,to){
+//     alert('print start'+''+from+'to'+''+to)
+// }
+// status('chennai','vellore')
+// status('3hr','bus')
+
+// function student(name,age,id=7,salary=20000)
+// {
+//     console.log(`student name ${name}`)
+//     console.log(`student age ${age}`)
+//     console.log(`student id ${id}`)
+//     console.log(`student salary ${salary}`)
+// }
+// student('hemnath',22)
+// student('malai',22)
+// student('dhanush',23)
+// student('kamu',30)
+
+// return statement:
+function add(x,y){
+    z=x+y
+    return z  
+    // what to do and terminate
+}
+x
+add(2,2)

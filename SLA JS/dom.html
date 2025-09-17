@@ -1,0 +1,63 @@
+<!-- document : file html,xml  (xml means we write the html code inside script is known as xml)
+objects : tags,elements
+model : laoyout structure html,xml structure
+
+dom is the platform and language neutral interface that allows program
+and script to dynamicaly access and update the content,structure and style of the document.
+
+dom separated in 3types:-
+core dom : standard model for all html document types
+xml dom : standard model for xml document
+html dom : standard model for html document
+
+interface to access content manipulate content dynamicaly
+
+html dom?
+html code will be converted into objects
+
+it defines:
+html elements as objects
+properties of all html elements
+methods to access all html elements/actions
+events for all html elements
+
+in other words the html dom is standard for how to get,change,add or  delete html document.
+
+dom method means 
+    document.getElementById
+    document.getElementsByClassName
+    document.getElementsByTagNameNS
+    document.querySelector
+    document.querySelectorAll  --- (node-list)
+
+.inner html:
+.inner html is the property which is used to get or replace the html elments.its return the value only
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="head">hello world</h1>
+    <p id="array">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, obcaecati?</p>
+</body>
+<script>
+    let name = 'hello world';
+    document.getElementById('head').innerHTML = name;
+    document.getElementsByClassName
+    document.getElementsByTagNameNS
+    document.querySelector
+    document.querySelectorAll
+    // let a=["hemnath",23,"vellore"];
+    let element = document.getElementById('array')
+    element.textContent += '["hemnath",23,"vellore"]';
+    console.log(element.textContent);
+</script>
+
+</html>
