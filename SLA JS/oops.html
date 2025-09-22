@@ -1,21 +1,108 @@
 <!-- OOPS:
+------------------
 object oriented programming language
 objest-car
 properties and value
-javascript language is a scripting language
+javascript lang scripting langauge 
 we use oops model in javascript bcz js is depend on object 
 
 oops principles:
+------------------------
 1.class and object.
 class - it means internal datamodel references of itself
 rules to create class:
 . class keyword must be their
 . following to that class name be in capitalize
 . for one class we can able to call multiple object
-object - 
+
+object - it means reference of the class
+create an object inside a class
+var classname=new object
+new keyword instance of object
+
+this keyword represents the owner of the object
+
+constructor function is the default function
+which always represents the object.
 
 2.data encapsulation.
 3.data abstraction.
 4.inheritance.
-5.polymorphism.
+5.polymorphism.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<!-- <script>
+    class Student{
+        constructor(id,name,city,email) //default constructor function 
+        {
+            this.id=id;
+            this.name=name;
+            this.city=city;
+            this.email=email;
+        }
+        display()
+        {
+            document.write('my stdid:' + ' ' + this.id + '' + 'my stdname:' + '' + this.name + 'my stdcity:' + '' + this.city + 'my stdemail:' + '' + this.email);
+        }
+    }
+        var obj1=new Student(24,'Hemnath','vellore','hemnath@gmail.com');
+        var obj2=new Student(22,'Malai','vellore','malai@gmail.com');
+        var obj3=new Student(23,'Dhanush','vellore','dhanush@gmail.com');
+        var obj4=new Student(21,'Kamesh','vellore','kamesh@gmail.com');
+        obj1.display();
+        obj2.display();
+        obj3.display();
+        obj4.display();
+    
+
+</script> -->
+<script>
+    class employe {
+        constructor(phno, name, city, batch) {
+            this.phno = phno;
+            this.name = name;
+            this.city = city;
+            this.batch = batch;
+        }
+        display() {
+            document.write(' employe ph:' + ' ' + this.phno + ' ' + ' employe name:' + ' ' + this.name + ' ' + ' employe city:' + ' ' + this.city + ' ' + 'employe batch:' + ' ' + this.batch);
+
+        }
+    }
+    var employe1 = new employe(1234567, 'Hemnath', 'vellore', '9clk');
+    var employe2 = new employe(1234567567, 'Malai', 'vellore', '9ck');
+    var employe3 = new employe(2456783, 'Dhanush', 'vellore', '9ck');
+    var employe4 = new employe(24567891, 'Kamesh', 'vellore', '9ck');
+    employe1.display();
+    employe2.display();
+    employe3.display();
+    employe4.display();
+</script>
+
+</html>
+
+
+<!-- question for mock:-
+1. what is the diff btw == and ===? 
+2. what is dom?
+3. dom how communicate with html
+4. what is the diff btw query selector and query selectorAll
+5. explain abt oops?
+6. what is the purpose of 'this' keyword and where we use?
+7. what is the diff btw for and while loop?
+8. switch case syntax?
+9. what is the diff btw switch statement and if else statement?
+10. what is the diff btw .innerHTML and textContent?
 -->

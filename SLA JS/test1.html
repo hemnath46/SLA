@@ -1,0 +1,70 @@
+<!--  senario based ques:-
+  
+1. create a simple button that when clicked changes the background color of the body element to a ramdom color?
+2. build a form with the input field and a button . when the button is clicked display the value entered in the 
+   input field with the new div element of the page?
+3. develop the simpley calculater interface that takes two numbers and an operator and displays the results when 
+   then calculator button is clicked
+ -->
+
+<!-- 1.create a simple button that  when clicked changes the background colour of the body element to a random colour. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+</head>
+<body id="page">
+    <button onclick="changeColor()">Click</button>
+    <script>
+        let colors = ["red", "green", "blue", "yellow", "pink", "orange", "purple"];
+        let index = 0;
+        function changeColor() {
+            document.getElementById("page").style.backgroundColor = colors[index];
+            index++;
+            if (index >= colors.length) {
+                index = 0;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- 2. build a form with the input field and a button . when the button is clicked display the value entered in the 
+   input field with the new div element of the page? -->
+   
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="">Name :</label>
+        <input type="text" name="name" placeholder="enter name"> <br><br>
+        <label title="">Password :</label>
+        <input type="password" name="password" placeholder="password">
+        <button onclick="form()">clicked</button>
+    </form>
+</body>
+<script>
+    function form(){
+        var name = document.myform.name.value
+        var password = document.myform.password.value
+        if (name == "" || name == null) {
+            alert('name cant be empty');
+            return false;
+        }
+        else if (password.length <= 8) {
+            alert('password length must be above 8 character');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html> -->
