@@ -48,6 +48,31 @@ dom method means
     <p id="array">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, obcaecati?</p>
 </body>
 <script>
+    document.querySelector('li')
+    // dom methods
+    const title = document.getElementById('main-heading');
+    console.log(title);
+
+    const title1 = document.getElementsByClassName('list-items');
+    console.log(title1);
+
+    const title2 = document.getElementsByTagName('li');
+    console.log(title2);
+
+    const title3 = document.querySelector('div');
+    console.log(title3);
+
+    const title4 = document.querySelectorAll('div');
+    console.log(title4);
+
+    const listitems = document.querySelectorAll('.list-items');
+    for (i = 0; i < listitems.length; i++) {
+        listitems[i].style.fontsize = '5em';
+    }
+    console.log('listitems')
+    // a query selector means returns the matches that css style as
+</script>
+<script>
     let name = 'hello world';
     document.getElementById('head').innerHTML = name;
     document.getElementsByClassName
@@ -59,4 +84,5 @@ dom method means
     element.textContent += '["hemnath",23,"vellore"]';
     console.log(element.textContent);
 </script>
+
 </html>
