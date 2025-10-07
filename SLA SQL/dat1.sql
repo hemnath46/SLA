@@ -26,6 +26,7 @@ alter table st_record add email varchar(20);
 -- where class is used for give unic datas.
 -- where class filter the record
 -- where class is used to filter the row
+-- where class is used to filter the record
 -- unique data's to insert
 update st_record set email='hari@gmail.com' where id=115;
 update st_record set email='arav@gmail.com' where id=116;
@@ -39,6 +40,9 @@ delete from st_record where emails='hari@gmail.com';
 -- drop its delete whole table
 truncate table st_record;
 drop table st_record;
+-- delete row data delete
+-- truncate remove whole data but not structure of table
+-- drop remove whole data include structure
 
 -- orderby
 create database sla_kknagar;

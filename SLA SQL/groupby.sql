@@ -100,7 +100,8 @@ select department,count(department) as DEPT from employees3 group by department 
 -- Which departments have a maximum salary less than 90000?
 
 -- having clause:
--- which is used inside the group byyo filter the record
+-- which is used inside the group by filter the record
 -- use "as" for having clause
+-- as is known as alice name
 
 -- where clause

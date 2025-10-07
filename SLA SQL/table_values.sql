@@ -4,6 +4,7 @@ create table place_depart(id int not null,name varchar(20) unique,course_detail 
 insert into place_depart values(1,'Hem','full stack'),(2,'Malai','full stack'),(3,'Dhanush','cloud comp'),(4,'saranya','data sci'),(5,'pooja','acounting'),(6,'prathi','acounting');
 select * from place_depart;
 select * from place_depart order by name;
+select * from place_depart order by name desc;
 select name from place_depart;
 insert into place_depart values(null,'kamesh','advocate');
 insert into place_depart values(7,null,'advocate');
@@ -55,4 +56,8 @@ insert into fore_table values(4, 'pikachu');
 insert into fore_table values(5, 'robert');
 insert into fore_table values(6,'hema'); -- error bcz the data is not in parent table // it only shows parent data in child table
 select *from fore_table;
+
+
+
+
 
