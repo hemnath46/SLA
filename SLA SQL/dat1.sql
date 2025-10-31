@@ -63,7 +63,8 @@ select * from stdz where id=118;
 select * from stdz where id>=115;
 select * from stdz where id<=115;
 
--- aggregate functions
+-- 
+aggregate functions
 -- min()
 -- max()
 -- avg()

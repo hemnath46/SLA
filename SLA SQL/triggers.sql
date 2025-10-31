@@ -30,15 +30,14 @@ insert into passengers values('jaswanth',464,'swiss',3500);
 -- syntax for trigger creation:
 -- create trigger triggername 
 -- before/after 
--- insert/update/delete from table name
--- for each row existing column=new column 
+-- insert/update/delete on from table name
+-- for each row set existing column=new column 
 
 
-create trigger flights
-before insert 
-on passengers 
-for each row 
-set new .chargers=new.chargers-2000;
+create trigger flights 
+before 
+insert on passengers 
+for each row set new .chargers=new.chargers-2000;
 
 -- DROP trigger IF EXISTS flights;
 
@@ -56,7 +55,6 @@ create table college_audit(id int,audit_description varchar(10),primary key(id))
 DROP TABLE IF EXISTS college_audit;
 
 DELIMITER $$
-
 CREATE TRIGGER afterinsertcoll 
 AFTER INSERT ON college_Student 
 FOR EACH ROW 
@@ -67,13 +65,12 @@ BEGIN
         CONCAT('A new row inserted ', DATE_FORMAT(NOW(), '%d-%m-%y %h:%i:%s %p'))
     );
 END$$
-
 DELIMITER ;
-
 INSERT INTO college_Student VALUES ('man',250,25);
 
 select * from college_Student;
+
 ALTER TABLE college_audit MODIFY audit_description VARCHAR(100);
 
-
 select * from college_audit;
+

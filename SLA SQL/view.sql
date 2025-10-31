@@ -41,7 +41,7 @@ insert into teacher values(4,'kamesh','M',22),(4,'dhanush','M',23),(5,'manoj','M
 select * from teacher;
 
 -- union will given only unique values
-select age from student union select age from teacher; -- union will combine both table data and give the unique values
+select age from student union select age from teacher; -- union will combine both table data but not allow duplicates
 select age from student where age>22 union select age from teacher;
 -- unoin all include duplicates values
 select age from student where age>=22 union all select age from teacher; -- union all will combine both the table data also include duplicates

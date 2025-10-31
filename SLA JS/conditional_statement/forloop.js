@@ -16,7 +16,8 @@
 // continue
 // 3 will be skip
 // for(let k=0;k<=5;k++){
-//     if(i==3)continue;
+//     if(i==3)
+//      continue;
 //     {
 //         console.log(k)
 //     }

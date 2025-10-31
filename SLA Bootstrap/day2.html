@@ -1,0 +1,182 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        [class^='container']
+        {
+            background-color: aqua;
+            border: black;
+        }
+        body
+        {
+            margin-top: 70px;
+        }
+        body::before
+        {
+            content: 'xs';
+            color: rebeccapurple;
+            font-size: 30px;
+            position: fixed;
+            font-weight: bold;
+            top: 0;
+            left: 0;
+        }
+        @media (min-width:576px){
+            body::before{
+                content: 'sm';
+        }
+        }
+        @media (min-width:768px){
+            body::before{
+                content: 'md';
+        }
+        }
+        @media (min-width:992px){
+            body::before{
+                content: 'lg';
+        }
+        }
+        @media (min-width:1200px){
+            body::before{
+                content: 'xl';
+        }
+        }
+        @media (min-width:1400px){
+            body::before{
+                content: 'xxl';
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container-lg" id="box">
+        <h2 id="size"></h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, dolores aspernatur sequi veniam molestiae excepturi laboriosam eos ullam autem quis?</p>
+    </div>
+    <script>
+        window.onresize=function()
+        {
+            const width=document.getElementById('box').clientWidth;
+            document.getElementById('size').innerHTML=width;
+        };
+    </script>
+</body>
+</html> -->
+
+<!-- grid use -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>this is a column in one row</p>
+            </div>
+            <div class="col">
+                <p>this is another column in row</p>
+            </div>
+            <div class="col">
+                <p>this is third column in a row</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                this is a column in one row
+            </div>
+            <div class="col">
+                <p>this is another column in a row</p>
+            </div>
+            <div class="col">
+                <p>this is thir column in a row</p>
+            </div>
+        </div>
+</body>
+</html> -->
+
+<!-- simple page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-secondary">
+    <div class="container">
+        <header class="p-3 bg-dark text-white">
+            <div class="row">
+                <div class="col-12 mb-6">
+                    <h1>SOFTLOGIC ACADEMY</h1>
+            </div>
+            <div class="col-12 col-md-6 mt-3 d-flex justify-content">
+                <!-- start,center,end -->
+                 <nav>
+                    <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">HOME</a></li>
+                     <li class="list-inline-item"><a href="#">ABOUT</a></li>
+                      <li class="list-inline-item"><a href="#">CONTACT</a></li>
+                    <ul>
+                 </nav>
+        </header>
+        <h1 class="mb-5">card gallery in boostrap</h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+                <h2>title1</h2>
+                <p>JD:python developer</p>
+                <p>software engineer</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                  <h2>title2</h2>
+                <p>JD:java developer</p>
+                <p>software developer</p>
+            </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <h2>title3</h2>
+                <p>JD:dotnet developer</p>
+                <p>software engineer</p>
+            </div>
+             <div class="col-12 col-sm-6 col-md-4">
+                  <h2>title4</h2>
+                <p>JD:dotnet developer</p>
+                <p>software developer</p>
+            </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                  <h2>title5</h2>
+                <p>JD:mern developer</p>
+                <p>software engineer</p>
+            </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                  <h2>title6</h2>
+                <p>JD:react developer</p>
+                <p>software developer</p>
+            </div>
+        </div>
+         <footer class="ps-3 bg-dark text-white">
+            <div class="row">
+                <div class="col">
+                    <p class="mt-5">Copyrigts and licensed</p>
+                </div>
+                <div class="col">
+                    <ul class="list-inline mt-5">
+                        <li class="list-inline-item"><a class="text-white text-decoration">FACEBOOK</a></li>
+                         <li class="list-inline-item"><a class="text-white text-decoration">TWITTER</a></li>
+                          <li class="list-inline-item"><a class="text-white text-decoration">INSTAGRAM</a></li>
+                    </ul>
+                </div>
+            </div>
+         </footer>
+        </div>
+</body>
+</html>

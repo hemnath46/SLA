@@ -7,7 +7,7 @@
 
 -- types of joins:
 -- 1.inner join
--- commin values will be displayed in both the tables
+-- common values will be displayed in both the tables
 
 -- 2.full outer join:
 -- right outer join
@@ -15,6 +15,7 @@
 -- left outer join
 -- full outer join (with the help of union can do it)
 -- both the table records with uncommon values will be shown.
+
 create database joins;
 use joins;
 CREATE TABLE airports (
@@ -51,19 +52,21 @@ INSERT INTO nationalairports VALUES
 (101, '2009-11-20 00:00:00', 2, 1560.00),
 (103, '2008-05-20 00:00:00', 4, 2060.00);
 
-SELECT * FROM airports INNER JOIN nationalairports ON airports.ID = nationalairports.airport_ID;
-
+SELECT * FROM airports INNER JOIN nationalairports ON airports.ID = nationalairports.airport_ID; -- return common values
+-- select * from airports a inner join nationalairports n on a.id=n.airport_id;
 SELECT ID, NAME, AMOUNT, DATE FROM airports LEFT JOIN nationalairports ON airports.ID = nationalairports.airport_ID;
+
+select * from airports right join nationalairports on airports.ID = nationalairports.airport_ID;
 
 
 select * from nationalairports;
 select * from airports;
 
+
 SELECT OID, airport_ID,name FROM nationalairports right JOIN airports ON airports.ID = nationalairports.airport_ID;
 
 
--- LIMIT clause is used to specify the no of rows you want
--- to return from your query.
+-- LIMIT clause is used to specify the no of rows you want to return from your query.
 -- syntax: select col1,col2 fromt tablename limit number;
 
 select * from airports limit 2;

@@ -5,7 +5,7 @@ use class;
 
 
 -- syntax for group by is:
--- 
+-- select column name,aggregate functions from tablename  by column name;
 create table data (orderid INT PRIMARY KEY,customer_name VARCHAR(100),location VARCHAR(100),category VARCHAR(50),unitprice INT,quantity INT,sales INT);
 insert into data values
 (1, 'Sarah Lee', 'Mexico City', 'Electronics', 150, 1, 150),
@@ -58,6 +58,7 @@ select customer_name,avg(quantity) from data group by customer_name;
 select location,category,sum(sales) from data group by loaction,category;
 
 -- How many unique location bought items from each category?
+
 -- distinct is used for unique data
 select distinct(location),count(category) from data group by location;
 
@@ -103,5 +104,36 @@ select department,count(department) as DEPT from employees3 group by department 
 -- which is used inside the group by filter the record
 -- use "as" for having clause
 -- as is known as alice name
+
+-- having clause:
+-- What are the categories with total sales greater than 1500?
+select category ,sum(sales) as S from data group by category having S>1500;
+
+-- which locations have an average unit price greater than 200?
+select location , avg(unitprice) as U from data group by location having U>200;
+
+-- List customers who purchased more than 3 items in total.
+select customer_name,sum(quantity) as items from data group by customer_name  having items>3;
+
+-- Which locations have more than 2 orders?
+select location, count(orderid) as O from data group by location having O >2;
+
+-- What categories have an average quantity sold greater than 2?
+select category , avg(quantity) quan from data group by category having quan >2;
+
+-- Find customers whose total sales exceed 500.
+select customer_name , sum(sales)as Ss from data group by customer_name having Ss>500;
+
+-- Which product categories in each location have total sales over 400?
+select location, category , sum(sales) as two from data group by location, category having two>400;
+
+-- What locations have sold more than 10 items in total?
+select location, sum(quantity) as quan from data group by location having quan>10;
+
+-- List categories with maximum sales per order above 400.
+select category , max(sales) as Sale from data group by category having Sale>400;
+
+-- Which customers have placed more than one order?
+select customer_name , count(orderid) as id from data group by customer_name having id>1;
 
 -- where clause
