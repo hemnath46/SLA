@@ -3,6 +3,9 @@ import Counter from './components/Counter';
 import Greetings from './components/Greetings';
 import Message from './components/Message';
 import Attendance from './components/Attendance';
+import ToggleContent from './components/ToggleContent';
+import LoginButton from './components/LoginButton';
+import Login from './components/Login';
 function App() {
  const userName ="Manu"
 
@@ -14,6 +17,9 @@ function App() {
   <Counter/>
   <Message/>
   <Attendance/>
+  <ToggleContent/>
+  <LoginButton/>
+  <Login/>
     </div>
 
   );

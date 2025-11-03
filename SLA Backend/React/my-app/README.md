@@ -97,6 +97,7 @@ rules for jsx:
            5.create a folder inside src as components (parsel casing )
              inside that file - Greetings. import it in app
            6. props - it is a property used to pass data from parent component to the child component
+           7. events using camel case
 
 Day 3:29/10/2025:
         state: state is special memory inside a component that can holds data which can change over time
@@ -114,7 +115,7 @@ console.log(name); // Gayathri
 console.log(age); // 22 
 task : Show each student’s name (from props) with a Present/Absent button. Use state to toggle and display the attendance status.
 
-day5:331/10/2025:
+day5:31/10/2025:
 listing in react by map and key
 ternary operator,boolean in state
 task:
@@ -123,3 +124,10 @@ task:
 && and state
 3.hide and show button
 a.
+
+day6:3/11/25:
+task:
+ternary operator login && operator
+1.weather app ==>temp:30 hot else cold
+.need input field
+.temp enter(0-55)

@@ -7,7 +7,7 @@ const student = {
   course: "MERN",
   city: "Chennai"
 };
-jnjjnj
+
 
 // Split (extract) some properties
 const { name, age } = student;
