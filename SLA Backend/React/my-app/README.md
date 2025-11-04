@@ -131,3 +131,6 @@ ternary operator login && operator
 1.weather app ==>temp:30 hot else cold
 .need input field
 .temp enter(0-55)
+
+day7:4/11/25
+waste
