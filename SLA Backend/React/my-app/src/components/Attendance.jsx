@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Attendance(){
-const students = ["Harish","Manu"," Renu"]
+const students = ["Hema","Malai"," Kamesh"]
 const [isPresent,setPresent] = useState(true)
 // const students = [
 //     {

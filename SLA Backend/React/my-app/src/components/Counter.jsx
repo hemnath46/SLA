@@ -15,8 +15,9 @@ const decrement = ()=> {
 
     return (
         <>
+        <h1>Counter:{count}</h1>
         <button onClick={()=>increment()}>+</button>
-        {count}
+        
         <button onClick={()=>decrement ()}>-</button>
         <Greetings/>
         </>
