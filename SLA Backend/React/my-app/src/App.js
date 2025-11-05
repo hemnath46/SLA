@@ -10,37 +10,27 @@ import Weather from './components/Weather';
 import StudentList from './components/StudentList';
 import FruitList from './components/FruitList';
 import VegitableList from './components/VegitableList';
+import Table from './components/Table';
+
 function App() {
   const userName = "Manu"
-
   return (
     <div className="App">
       {/*  MAIN COMP */}
       <p className='username' style={{ color: "red" }}> {userName}</p>
       * <Greetings userName={userName} />
-
       <Counter />
-
       <Message />
-
       <Attendance />
-
       <ToggleContent />
-
       <LoginButton />
-
       <Login />
-
       <Weather />
-
-      <StudentList/>
-
-      <FruitList/>
-
-      <VegitableList/>
+      <StudentList />
+      <FruitList />
+      <VegitableList />
+      <Table />
     </div>
-
   );
 }
-
 export default App;   

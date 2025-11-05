@@ -14,7 +14,7 @@ function VegitableList(){
         }
     ];
     return(
-        <ul>
+        <ul style={{listStyle:"none"}}>
             {vegitables.map((vegitable,index)=>(
                 <li key={index}>{vegitable.name}{vegitable.price}</li>
             ))}
