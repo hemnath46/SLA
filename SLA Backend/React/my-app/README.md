@@ -133,4 +133,8 @@ ternary operator login && operator
 .temp enter(0-55)
 
 day7:4/11/25
-waste
+review
+
+day8:5/11/25
+event handler - it  is a function that handles the user  interaction like clicking mouse
+API-Apllication Programming Interface

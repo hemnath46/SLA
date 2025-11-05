@@ -1,12 +1,12 @@
 import './App.css';
 import Course from './Components/Course';
-import Weather from './Components/Weather';
+import Table from './Components/Table';
 
 function App(){
   return(
     <>
     <Course name="hema" rate="577"/>
-    <Weather/>
+    <Table/>
     </>
     
   );

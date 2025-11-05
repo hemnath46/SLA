@@ -7,6 +7,9 @@ import ToggleContent from './components/ToggleContent';
 import LoginButton from './components/LoginButton';
 import Login from './components/Login';
 import Weather from './components/Weather';
+import StudentList from './components/StudentList';
+import FruitList from './components/FruitList';
+import VegitableList from './components/VegitableList';
 function App() {
   const userName = "Manu"
 
@@ -29,6 +32,12 @@ function App() {
       <Login />
 
       <Weather />
+
+      <StudentList/>
+
+      <FruitList/>
+
+      <VegitableList/>
     </div>
 
   );
