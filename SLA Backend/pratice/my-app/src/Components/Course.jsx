@@ -1,4 +1,3 @@
-const Course1 = "HTML"
 function Course(props) {
     return (
         <>

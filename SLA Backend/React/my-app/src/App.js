@@ -11,25 +11,32 @@ import StudentList from './components/StudentList';
 import FruitList from './components/FruitList';
 import VegitableList from './components/VegitableList';
 import Table from './components/Table';
+import WeatherInfo from './components/WeatherInfo';
+import Colors from './components/Colors';
+import StudentTable from './components/StudentTable';
 
 function App() {
-  const userName = "Manu"
+  const userName = "Hemnath"
   return (
     <div className="App">
       {/*  MAIN COMP */}
       <p className='username' style={{ color: "red" }}> {userName}</p>
-      * <Greetings userName={userName} />
+      <Greetings userName={userName} />
       <Counter />
       <Message />
       <Attendance />
       <ToggleContent />
       <LoginButton />
-      <Login />
+      <Login name="Hemnath" />
       <Weather />
       <StudentList />
       <FruitList />
       <VegitableList />
       <Table />
+      <Colors/>
+      <WeatherInfo weather={{city: "Chennai",temp:30 }}/>
+      <StudentTable/>
+      {/* <WeatherInfo city="Vellore" temp="30"/> */}
     </div>
   );
 }

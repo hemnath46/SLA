@@ -1,5 +1,6 @@
 import './App.css';
 import Course from './Components/Course';
+import Login from './Components/Login';
 import Table from './Components/Table';
 
 function App(){
@@ -7,6 +8,7 @@ function App(){
     <>
     <Course name="hema" rate="577"/>
     <Table/>
+    <Login/>
     </>
     
   );
