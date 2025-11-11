@@ -138,3 +138,35 @@ review
 day8:5/11/25
 event handler - it  is a function that handles the user  interaction like clicking mouse
 API-Apllication Programming Interface
+
+day11:10/11/25
+form submit:-
+controlled component : 
+uncontrolled component :
+
+day12:11/11/25
+drop down statement using <select>
+
+useEffect ??
+syntax:
+
+useEffect(()=>{
+  <!-- side effect code -->
+})
+
+case:1 -->run after all renders
+useEffect({}=>{
+  <!-- side effect code -->
+})
+
+case:2 -->run after initial render
+useEffect(()=>{
+  <!-- side effect code -->
+},[])
+dependancy - array - second is useEffect
+
+case:3 -->run after state change render
+const[name,setName]=useState(")
+useEffect(()=>{
+<!-- side effect code -->
+},[name])

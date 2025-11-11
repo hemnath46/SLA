@@ -14,6 +14,9 @@ import Table from './components/Table';
 import WeatherInfo from './components/WeatherInfo';
 import Colors from './components/Colors';
 import StudentTable from './components/StudentTable';
+import Form from './components/Form';
+import DropDown from './components/DropDown';
+import SideEffect from './components/SideEffect';
 
 function App() {
   const userName = "Hemnath"
@@ -33,10 +36,13 @@ function App() {
       <FruitList />
       <VegitableList />
       <Table />
-      <Colors/>
-      <WeatherInfo weather={{city: "Chennai",temp:30 }}/>
-      <StudentTable/>
+      <Colors />
+      <WeatherInfo weather={{city: "Chennai",temp:30 }} />
+      <StudentTable />
       {/* <WeatherInfo city="Vellore" temp="30"/> */}
+      <Form/>
+      <DropDown/>
+      <SideEffect username="hems"/> 
     </div>
   );
 }

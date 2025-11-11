@@ -21,7 +21,7 @@ const StudentTable = () => {
     ]
     return (
         <div className="studentTable">
-            <table>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>rollNo</th>
@@ -31,7 +31,7 @@ const StudentTable = () => {
                 </thead>
                 <tbody>
                     {
-                        students?.map((student, index) => (
+                        students.map((student, index) => (
 
                             <tr key={index}>
                                 <td>{student.rollNo}</td>
