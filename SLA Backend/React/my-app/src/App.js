@@ -5,7 +5,7 @@ import Message from './components/Message';
 import Attendance from './components/Attendance';
 import ToggleContent from './components/ToggleContent';
 import LoginButton from './components/LoginButton';
-import Login from './components/Login';
+// import Login from './components/Login';
 import Weather from './components/Weather';
 import StudentList from './components/StudentList';
 import FruitList from './components/FruitList';
@@ -17,13 +17,26 @@ import StudentTable from './components/StudentTable';
 import Form from './components/Form';
 import DropDown from './components/DropDown';
 import SideEffect from './components/SideEffect';
+import UseEffectDemo from './components/UseEffectDemo';
+import FeedBack from './components/FeedBack';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+// import Home from './pages/Home';
+// import About from './pages/About';
+import Home from './pages1/Home';
+import About from './pages1/About';
+import Login from './pages1/Login';
+import Todo from './components/Todo';
+import Task from './components/Task';
+import Task1 from './components/Task1';
+import Task2 from './components/Task2';
+import Task3 from './components/Task3';
 
 function App() {
   const userName = "Hemnath"
   return (
     <div className="App">
       {/*  MAIN COMP */}
-      <p className='username' style={{ color: "red" }}> {userName}</p>
+      {/* <p className='username' style={{ color: "red" }}> {userName}</p>
       <Greetings userName={userName} />
       <Counter />
       <Message />
@@ -38,11 +51,45 @@ function App() {
       <Table />
       <Colors />
       <WeatherInfo weather={{city: "Chennai",temp:30 }} />
-      <StudentTable />
+      <StudentTable /> */}
       {/* <WeatherInfo city="Vellore" temp="30"/> */}
-      <Form/>
+      {/* <Form />
       <DropDown/>
       <SideEffect username="hems"/> 
+      <UseEffectDemo studentName="hemnath"/>
+      <FeedBack />
+      <Todo /> */}
+      <Task/>
+      <Task1/>
+      <Task2/>
+      <Task3/>
+
+      {/* <BrowserRouter>
+        <nav>
+          <Link></Link>
+          <Link to={"/Home"}>Home</Link>
+          <Link to={"/About"}>About</Link>
+        </nav>
+
+        <Routes>
+          <Route path='/Home' element={<Home />} />
+          <Route path='/About' element={<About />} />
+        </Routes>
+      </BrowserRouter> */}
+
+
+      {/* <BrowserRouter>
+        <nav style={{ padding: "20px", background: "#eee", display: "flex", gap: "20px" }}>
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }
