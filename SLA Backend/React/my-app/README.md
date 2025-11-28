@@ -88,6 +88,7 @@ day 2: 28/10/2025:
 file structure
 component- is a building block of react project it is a resuable piece of code
 function components - component is a js function which returns the jsx element.
+Key - key should be unique and stable across render.
 jsx: javascript xml (not html it is html like syntax)
 rules for jsx:
            1.returns only one parent element
@@ -98,11 +99,12 @@ rules for jsx:
              inside that file - Greetings. import it in app
            6. props - it is a property used to pass data from parent component to the child component
            7. events using camel case
+            props - props passing deeply through many components.
 
 Day 3:29/10/2025:
         state: state is special memory inside a component that can holds data which can change over time
         Hooks: hook is a special function used to  state management, lifecycle methods , side effects 
-        usestate: usestate is a hook used to manage state.
+        usestate: usestate is a hook used to manage state.     
         const [state, setState]=usestate
         events:action performed by user
         synthetic events: react wrap html events.
@@ -141,8 +143,9 @@ API-Apllication Programming Interface
 
 day11:10/11/25
 form submit:-
-controlled component : 
-uncontrolled component :
+controlled component : the components control by  react state
+uncontrolled component : the components control dom it self
+Fragment - it is group of multiple element and it's not create new node in dom and it's not affect the css style
 
 day12:11/11/25
 drop down statement using <select>
