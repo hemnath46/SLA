@@ -1,0 +1,88 @@
+.admin-container {
+  padding: 25px;
+  background: linear-gradient(to bottom right, #002733, #003b4a);
+  min-height: 100vh;
+}
+
+/* top header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-header h1 {
+  color: white;
+  font-size: 36px;
+}
+
+.admin-logout {
+  background: #ff1e1e;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-logout:hover {
+  background: #cc0000;
+}
+
+.section-title {
+  color: white;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* The feedback cards */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.fb-card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.fb-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #00eaff;
+}
+
+.fb-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.star {
+  color: gold;
+  font-size: 18px;
+}
+
+/* delete button */
+.delete-btn {
+  background: #ff3b3b;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}

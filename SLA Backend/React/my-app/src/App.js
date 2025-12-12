@@ -32,11 +32,16 @@ import Task from './components/Task';
 import Task1 from './components/Task1';
 import Task2 from './components/Task2';
 import Task3 from './components/Task3';
+
 import Cart from './components/Cart';
 import StateDistrict from './components/StateDistrict';
 import Calculator from './calculator/Calculator';
 import LoginForm from './LoginForm/LoginForm';
+import Profile from './LoginForm/Profile';
 import ReduceHook from './components/ReducerHook';
+import TrafficSignal from './components/TrafficSignal';
+
+
 
 // nav content
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -47,9 +52,33 @@ import ReduceHook from './components/ReducerHook';
 // import Profile from "./navbar/Profile";
 // import About from "./navbar/About";
 
+// mini project
+// import { BrowserRouter,Routes,Route } from 'react-router-dom';
+// import Navbar from './miniproject/Navbar';
+// import Home from './miniproject/Home';
+// import Doctors from './miniproject/Doctors';
+// import BookAppointment from './miniproject/BookAppointment';
+// import MyAppointments from './miniproject/MyAppointments';
+
+// usecontext
+import { MyContext } from './usecontext/MyContext';
+import ChildA from './usecontext/ChildA';
+import ChildB from './usecontext/ChildB';
+import ChildC from './usecontext/ChildC';
+
+// login with animation
+import Login from './Login/Login';
+
+
 function App() {
   // const userName = "Hemnath";
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // usecontext
+  const userData ={
+    name :"Hemnath",
+    city :"Vellore"
+  };
   return (
     <div className="App">
       {/*  MAIN COMP */}
@@ -81,10 +110,25 @@ function App() {
       <Task2/>
       <Task3/>
       <Cart/>
-      <StateDistrict/> */}
+      <StateDistrict/>
       <Calculator/>
       <LoginForm/>
+      <Profile/>
       <ReduceHook/>
+      <TrafficSignal/> */}
+
+      {/* login with animation */}
+      {/* <Login/> */}
+
+      {/* usecontext */}
+      <MyContext.Provider value={userData}>
+        <div>
+          <h1>App components</h1>
+          <ChildA/>
+          <ChildB/>
+          <ChildC/>
+        </div>
+      </MyContext.Provider>
 
       {/* <BrowserRouter>
         <nav>
@@ -127,6 +171,18 @@ function App() {
           </Routes>
         </div>
       </Router> */}
+
+      {/* mini project */}
+      {/* <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/doctors' element={<Doctors/>}/>
+        <Route path='/book' element={<BookAppointment/>}/>
+        <Route path='/appointments' element={<MyAppointments/>}/>
+
+      </Routes>
+      </BrowserRouter> */}
       
     </div>
   );

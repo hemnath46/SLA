@@ -1,0 +1,118 @@
+/* Main container */
+.fb-container {
+  padding: 25px;
+  max-width: 600px;
+  margin: auto;
+  color: white;
+}
+
+.fb-title {
+  text-align: center;
+  font-size: 28px;
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.fb-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #0c2530;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.fb-form label {
+  font-size: 16px;
+  color: #cce9f3;
+}
+
+.fb-form input,
+.fb-form textarea {
+  width: 100%;
+  background: #062029;
+  border: 1px solid #02414d;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: 16px;
+}
+
+.fb-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.fb-form input:focus,
+.fb-form textarea:focus {
+  border-color: #00eaff;
+}
+
+/* Submit button */
+.fb-btn {
+  background: #00eaff;
+  border: none;
+  padding: 12px;
+  color: #002831;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fb-btn:hover {
+  background: #00b7cc;
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* ABOVE CART */
+}
+
+/* Popup design */
+.popup-card {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  animation: popupScale 0.2s ease-in-out;
+}
+
+@keyframes popupScale {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close-popup-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #00bcd4;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-popup-btn:hover {
+  background: #008fa1;
+}
