@@ -173,3 +173,80 @@ const[name,setName]=useState(")
 useEffect(()=>{
 <!-- side effect code -->
 },[name])
+
+
+react mock ques:
+babel - compiler/ transpilar  converts jsx to pure js
+
+package.json - blueprint or metadata of a particular project
+
+src- source file that contains all the code files that you work
+
+component- is a building block of react project it is a resuable piece of code
+
+function components - component is a js function which returns the jsx element.
+
+Key - key should be unique and stable across render.
+
+jsx: javascript xml (not html it is html like syntax)
+
+rules for jsx:
+           1.returns only one parent element
+           2.embedded js using {}
+           3.inline styles -- {{}}
+           4. use "className" instead of  using "class"
+           5.create a folder inside src as components (parsel casing )
+             inside that file - Greetings. import it in app
+           6. props - it is a property used to pass data from parent component to the child component
+           7. events using camel case
+            props - props passing deeply through many components.
+
+Props: Used to pass data from parent to child component.
+Props Drilling: Passing props through many components unnecessarily.
+  Why is Props Drilling a problem?
+  1.Makes code messy
+  2.Hard to maintain
+  3.Difficult to debug
+  How do we avoid Props Drilling?
+  👉 By using:
+  1.Context API
+  2.Redux
+
+state: state is special memory inside a component that can holds data which can change over time
+
+Hooks: hook is a special function used to  state management, lifecycle methods , side effects 
+
+usestate: usestate is a hook used to manage state. 
+
+event handler - it  is a function that handles the user  interaction like clicking mouse
+
+API-Apllication Programming Interface
+
+controlled component : the components control by  react state
+uncontrolled component : the components control dom it self
+
+Fragment - it is group of multiple element and it's not create new node in dom and it's not affect the css style
+
+install react:
+Install react 
+Step 1:Node -v
+Step 2:Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+Step 3:npm -v
+Step 4:npx create-react-app my-app
+Step 5:cd my-app
+Step 6: npm start
+
+Install redux:
+npm i redux
+
+Install vite:
+$ npm create vite@latest
+Step 1:npm create vite@latest my-app
+Step 2:cd my-app
+Step 3:npm install
+Step 4:npm run dev
+
+
+Install express:
+npm install Express
+npm i express
